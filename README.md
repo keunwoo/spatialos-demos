@@ -1,38 +1,18 @@
-# SpatialOS empty project
+# SpatialOS demos
 
-This is an empty SpatialOS project that can be used as a slimmed-down target for
-creating C++ workers from the [spatialos/CppBlankProject][CppBlankProject]
-templates.
+This is a repository to hold simple SpatialOS demos.  Currently it is focused on
+demonstrating usage of SpatialOS "bare metal" APIs.
 
-How to use this repository:
+As of mid-2018, most existing public SpatialOS tutorials assume that developers
+are interested in a Unity-centric workflow.  Even the [C++ worker
+tutorial][cpp-worker-tutorial] assumes that you have started with their Unity
+pirates tutorial.  This is great if you want to get up and running with a game
+quickly, but if you want to understand the SpatialOS computational model and
+APIs, it may be helpful to see something built "from scratch" directly on
+SpatialOS APIs alone.
 
-* Clone this repo.
-* Clone `spatialos/CppBlankProject` into another directory.
-* Use the `worker_create.sh` script from `spatialos/CppBlankProject` to add a
-  worker to this project.
-* Push your clone to your project repo.
+This repo was forked from [spatialos-empty-project][spatialos-empty-project];
+see that project's README.md for details.
 
-## Why?
-
-`CppBlankProject`, despite its name, is not truly blank.  It contains templates
-for trivial managed and external C++ workers.  Instantiating a worker from the
-templates is what the `CppBlankProject/worker_create.sh` script is for; however,
-that script, amusingly enough, does not work correctly when you use it to create
-a worker within the same repository.  You need to point it at (a directory
-beneath) another target repo.
-
-In ASCII art:
-
-```
-+----------------+                              +-------+
-| CppBlankWorker | ----> worker_create.sh ----> |  ???  |
-+----------------+                              +-------+
-```
-
-The purpose of _this_ repository is to be the target repo `???`.
-
-Yes, you could just use another instance of the `CppBlankProject` repo as your
-target, but do you really want to waste time and disk space building the
-template workers whenever you build your project?  Probably not.
-
-[CppBlankProject]: https://github.com/spatialos/CppBlankProject
+[cpp-worker-tutorial]: https://github.com/spatialos/UnitySDK/tree/master/docs/tutorials/cpp-worker-tutorial
+[spatialos-empty-project]: https://github.com/keunwoo/spatialos-empty-project
