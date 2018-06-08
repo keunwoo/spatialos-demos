@@ -11,40 +11,5 @@
     }
   },
   "workers": [
-    {
-      "worker_type": "External",
-      "permissions": [{
-        "entity_creation": {
-          "allow": true
-        },
-        "entity_deletion": {
-          "allow": true
-        },
-        "entity_query": {
-          "allow": true,
-          "components": []
-        }
-      }]
-    },
-    {
-      "worker_type": "Managed",
-      "permissions": [{
-        "entity_creation": {
-          "allow": true
-        },
-        "entity_deletion": {
-          "allow": true
-        },
-        "entity_query": {
-          "allow": true,
-          "components": []
-        }
-      }],
-      "load_balancing": {
-        "auto_hex_grid": {
-          "num_workers": 1
-         }
-      }
-    }
   ]
 }
