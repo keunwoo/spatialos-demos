@@ -12,4 +12,7 @@ logs/
 dependencies/worker_sdk
 
 # Schema generated sources
+generated_code/dependencies/worker_sdk/
+
+# Generated code from schema
 generated_code/
